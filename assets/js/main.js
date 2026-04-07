@@ -72,24 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         observer.observe(el);
     });
-});
+    // --- Phone Copy to Clipboard ---
+    const phoneEl = document.getElementById('phone-number');
+    if (phoneEl) {
+        phoneEl.addEventListener('click', function() {
+            const phone = this.getAttribute('data-phone');
+            copyToClipboard(phone);
+            showNotification('تم نسخ الرقم بنجاح');
+        });
+    }
 
-
-
-
-    document.getElementById('phone-number').addEventListener('click', function() {
-        const phone = this.getAttribute('data-phone');
-        copyToClipboard(phone);
-        showNotification( 'تم نسخ الرقم بنجاح ');
-    });
-
-    // دالة النسخ
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(function() {
             console.log('تم النسخ بنجاح');
         }).catch(function(err) {
             console.error('فشل النسخ: ', err);
-            // طريقة بديلة للمتصفحات القديمة
             const textarea = document.createElement('textarea');
             textarea.value = text;
             document.body.appendChild(textarea);
@@ -99,9 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // إشعار مؤقت
     function showNotification(msg) {
+        const existing = document.querySelector('.copy-notification');
+        if (existing) existing.remove();
+
         const notification = document.createElement('div');
+        notification.className = 'copy-notification';
         notification.textContent = msg;
         notification.style.cssText = `
             position: fixed;
@@ -119,3 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(notification);
         setTimeout(() => notification.remove(), 2000);
     }
+});
