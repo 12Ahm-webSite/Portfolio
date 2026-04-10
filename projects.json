@@ -1,0 +1,83 @@
+[
+  {
+    "title": "LoomApp",
+    "coverColor": "cover-blue",
+    "shortTitle": "LoomApp",
+    "githubLink": "https://github.com/LoomProject/loom",
+    "websiteLink": "https://loom-weg1.onrender.com/",
+    "description": "Built a full-stack web platform as a graduation project featuring user authentication, role-based permissions, and profile management. Implemented a star-rating system with conditional rendering.",
+    "tags": ["Django", "Python", "HTML/CSS", "PostgreSQL"]
+  },
+  {
+    "title": "Nova",
+    "coverColor": "cover-indigo",
+    "shortTitle": "Nova",
+    "githubLink": "https://github.com/12Ahm-webSite/Nova",
+    "websiteLink": "https://shaheq.cloud/",
+    "description": "Designed and developed a responsive website with a modern UI layout, showcasing advanced HTML and CSS techniques.",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Destini",
+    "coverColor": "cover-rose",
+    "shortTitle": "Destini App",
+    "githubLink": "https://github.com/12Ahm-webSite/destini_starting_master",
+    "websiteLink": "",
+    "description": "Built an interactive branching narrative game with 7 different story endings. Integrated bilingual support (Arabic/English) using locale providers.",
+    "tags": ["Flutter", "Dart", "Riverpod"]
+  },
+  {
+    "title": "Speed Meter",
+    "coverColor": "cover-teal",
+    "shortTitle": "Internet Speed Meter",
+    "githubLink": "https://github.com/12Ahm-webSite/internet_speed_meter_app",
+    "websiteLink": "",
+    "description": "Developed a mobile application to measure and display real-time internet speed efficiently.",
+    "tags": ["Flutter", "Dart", "C++"]
+  },
+  {
+    "title": "ChatApp",
+    "coverColor": "cover-violet",
+    "shortTitle": "ChatApp",
+    "githubLink": "https://github.com/12Ahm-webSite/ChatApp",
+    "websiteLink": "",
+    "description": "Built a real-time chat application with backend architecture powered by Django.",
+    "tags": ["Django", "Python"]
+  },
+  {
+    "title": "To-Do API",
+    "coverColor": "cover-amber",
+    "shortTitle": "To-Do API",
+    "githubLink": "https://github.com/12Ahm-webSite/todo_api-master",
+    "websiteLink": "",
+    "description": "Created a RESTful API for a to-do application supporting full CRUD operations and database synchronization.",
+    "tags": ["Django REST", "Python"]
+  },
+  {
+    "title": "3D Web",
+    "coverColor": "cover-zinc",
+    "shortTitle": "Three.js Scene",
+    "githubLink": "https://github.com/12Ahm-webSite/threejs",
+    "websiteLink": "https://12ahm-website.github.io/threejs/",
+    "description": "Explored 3D web rendering using Three.js to build an interactive visual scene within the browser.",
+    "tags": ["JavaScript", "Three.js"]
+  },
+  {
+    "title": "Glam",
+    "coverColor": "cover-rose",
+    "shortTitle": "Glam",
+    "githubLink": "https://github.com/12Ahm-webSite/GLAM-end",
+    "websiteLink": "https://glam-end.vercel.app/",
+    "description": "GLAM Project is a fashion-sharing website. The homepage displays the site's logo along with active buttons for Login, Sign Up, and Continue as a Guest.The interface is simple and modern, with support for buttons, page navigation, and a sized button at the top of the page. The site uses HTML, CSS, and JavaScript.",
+    "tags": ["JavaScript", "HTML/CSS"]
+  },
+  {
+    "title": "Book",
+    "coverColor": "cover-indigo",
+    "shortTitle": "Book story",
+    "githubLink": "https://github.com/12Ahm-webSite/Book",
+    "websiteLink": "https://book-gamma-wine.vercel.app/",
+    "description": "It is an interactive online library where users can browse books, listen to audiobooks, and manage their accounts and interests through a modern web interface. The project includes pages for viewing books, listening, personal accounts, and the library, with file organization that includes HTML, CSS, JavaScript, information, images, and audio files.",
+    "tags": ["JavaScript", "HTML/CSS"]
+  }
+]
