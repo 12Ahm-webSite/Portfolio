@@ -22,7 +22,6 @@
     "coverColor": "cover-rose",
     "shortTitle": "Destini App",
     "githubLink": "https://github.com/12Ahm-webSite/destini_starting_master",
-    "websiteLink": "",
     "description": "Built an interactive branching narrative game with 7 different story endings. Integrated bilingual support (Arabic/English) using locale providers.",
     "tags": ["Flutter", "Dart", "Riverpod"]
   },
@@ -31,7 +30,6 @@
     "coverColor": "cover-teal",
     "shortTitle": "Internet Speed Meter",
     "githubLink": "https://github.com/12Ahm-webSite/internet_speed_meter_app",
-    "websiteLink": "",
     "description": "Developed a mobile application to measure and display real-time internet speed efficiently.",
     "tags": ["Flutter", "Dart", "C++"]
   },
@@ -40,7 +38,6 @@
     "coverColor": "cover-violet",
     "shortTitle": "ChatApp",
     "githubLink": "https://github.com/12Ahm-webSite/ChatApp",
-    "websiteLink": "",
     "description": "Built a real-time chat application with backend architecture powered by Django.",
     "tags": ["Django", "Python"]
   },
@@ -49,7 +46,6 @@
     "coverColor": "cover-amber",
     "shortTitle": "To-Do API",
     "githubLink": "https://github.com/12Ahm-webSite/todo_api-master",
-    "websiteLink": "",
     "description": "Created a RESTful API for a to-do application supporting full CRUD operations and database synchronization.",
     "tags": ["Django REST", "Python"]
   },

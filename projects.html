@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore projects built by Ahmed Ali Al-Kamal, including full-stack web platforms, mobile apps, and interactive 3D scenes.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmedalkamal.dev/projects.html">
+    <meta property="og:title" content="Projects - Ahmed Ali Al-Kamal Portfolio">
+    <meta property="og:description" content="Explore projects built by Ahmed Ali Al-Kamal, including full-stack web platforms, mobile apps, and interactive 3D scenes.">
+    <meta property="og:image" content="./assets/images/og-banner.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects - Ahmed Ali Al-Kamal Portfolio">
+    <meta name="twitter:description" content="Explore projects built by Ahmed Ali Al-Kamal.">
+
     <title>Projects - Ahmed Ali Al-Kamal</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <noscript>
+        <div style="text-align:center;padding:2rem;background:#fef3c7;color:#92400e;font-family:sans-serif;">
+            <p><strong>JavaScript is disabled.</strong> Projects are loaded dynamically. Please enable JavaScript to view them.</p>
+        </div>
+    </noscript>
     <div class="page-shell">
         <div class="blob-container">
             <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
         </div>
 
         <nav class="site-header glass with-border">
@@ -61,14 +80,35 @@
         <section class="projects-section">
             <div class="container-wide">
                 <div class="projects-grid" id="projects-container">
+                    <!-- Loading skeleton -->
+                    <div class="project-card skeleton-card" aria-hidden="true">
+                        <div class="project-cover cover-blue"><h3>&nbsp;</h3></div>
+                        <div class="project-body">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                    <div class="project-card skeleton-card" aria-hidden="true">
+                        <div class="project-cover cover-indigo"><h3>&nbsp;</h3></div>
+                        <div class="project-body">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                    <div class="project-card skeleton-card" aria-hidden="true">
+                        <div class="project-cover cover-teal"><h3>&nbsp;</h3></div>
+                        <div class="project-body">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
                     <!-- Projects will be loaded dynamically from projects.json -->
                 </div>
             </div>
         </section>
 
-        <footer class="site-footer">
-            <p>Built with HTML, CSS, and Vanilla JS</p>
-            <p>&copy; 2026 Ahmed Ali Al-Kamal. All rights reserved. | <span class="footer-location">Sana'a, Yemen</span></p>
+        <footer class="site-footer" id="site-footer">
+            <!-- Rendered by JS -->
         </footer>
     </div>
 
