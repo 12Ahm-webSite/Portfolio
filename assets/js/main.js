@@ -61,6 +61,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Spotlight / Cursor Glow (CSS variables) ---
+    (function initSpotlight() {
+        const root = document.documentElement;
+        let rafId = null;
+        let lastX = 0;
+        let lastY = 0;
+
+        function setVars(x, y) {
+            // x/y as viewport percentages for more stable look on resize
+            const w = window.innerWidth || 1;
+            const h = window.innerHeight || 1;
+            const px = Math.max(0, Math.min(100, (x / w) * 100));
+            const py = Math.max(0, Math.min(100, (y / h) * 100));
+            root.style.setProperty('--spot-x', px + 'vw');
+            root.style.setProperty('--spot-y', py + 'vh');
+        }
+
+        function onMove(e) {
+            lastX = e.clientX;
+            lastY = e.clientY;
+
+            if (rafId) return;
+            rafId = window.requestAnimationFrame(() => {
+                rafId = null;
+                setVars(lastX, lastY);
+            });
+        }
+
+        // touch: move spotlight but avoid accidental scrolling issues
+        window.addEventListener('mousemove', onMove, { passive: true });
+        window.addEventListener('touchmove', (e) => {
+            if (!e.touches || !e.touches[0]) return;
+            onMove(e.touches[0]);
+        }, { passive: true });
+
+        // ensure initial position looks good
+        setVars(window.innerWidth * 0.5, window.innerHeight * 0.35);
+        // keep glow on navigation even if mouse leaves the screen
+        document.body.classList.add('supports-spotlight');
+    })();
+
     // --- Scroll Animations (Intersection Observer) ---
     const observerOptions = {
         root: null,
@@ -68,9 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     };
 
+    // Stagger index for reveals (also works for dynamically added projects)
+    let revealCounter = 0;
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Stagger using a CSS variable consumed by `assets/css/style.css`
+                const delay = revealCounter * 70; // ms
+                entry.target.style.setProperty('--reveal-delay', delay + 'ms');
+                revealCounter += 1;
+
                 entry.target.classList.add('active');
                 observer.unobserve(entry.target); // Run animation once
             }
