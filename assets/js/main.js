@@ -1,10 +1,155 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const translations = {
+        ar: {
+            'nav.about': 'من أنا',
+            'nav.skills': 'المهارات',
+            'nav.projects': 'المشاريع',
+            'nav.contact': 'تواصل',
+            'hero.eyebrow': 'مرحباً، اسمي',
+            'hero.name': 'أحمد علي الكمال.',
+            'hero.tagline': 'أبني الويب بشكل احترافي.',
+            'hero.text': 'أنا خريج تقنيات معلومات، وأعمل على بناء تطبيقات ويب وموبايل متكاملة باستخدام Django و React و Flutter، مع اهتمام كبير بالكود النظيف وتجربة المستخدم وحل المشكلات الواقعية.',
+            'hero.buttonWork': 'عرض أعمالي',
+            'hero.buttonGitHub': 'ملفي على GitHub',
+            'hero.buttonCv': 'تحميل السيرة',
+            'about.title': 'من أنا',
+            'about.summaryTitle': 'نبذة مختصرة',
+            'about.summaryText': 'خريج تقنيات معلومات، ولدي خبرة عملية في تطوير تطبيقات ويب وموبايل كاملة المراحل. أعمل بشكل أساسي مع Django و React و Flutter، وأحب كتابة كود نظيف وتجربة مستخدم سلسة وحل المشكلات الواقعية من خلال البرمجيات.',
+            'about.languagesTitle': 'اللغات',
+            'about.arabic': 'العربية',
+            'about.native': '- أصلية',
+            'about.english': 'الإنجليزية',
+            'about.proficient': '- مستوى عملي جيد',
+            'about.education': 'التعليم',
+            'about.degree': 'بكالوريوس تقنية المعلومات',
+            'about.expected': 'متوقع: 2026',
+            'about.university': 'جامعة العلوم الحديثة (UMS) - صنعاء، اليمن',
+            'about.projectLabel': 'مشروع التخرج:',
+            'about.projectName': 'LoomApp - منصة ويب متكاملة تم بناؤها باستخدام Django.',
+            'about.cvButton': 'تحميل السيرة كاملة',
+            'skills.title': 'المهارات التقنية',
+            'skills.languages': 'اللغات',
+            'skills.frontend': 'الواجهة الأمامية',
+            'skills.backend': 'الخلفية',
+            'skills.database': 'قواعد البيانات',
+            'skills.tools': 'الأدوات والمزيد',
+            'skills.optimizedUI': 'واجهة مُحسّنة',
+            'skills.cta': 'شاهد ما أنشأته بهذه المهارات',
+            'contact.title': 'تواصل معي',
+            'contact.text': 'أبحث حاليًا عن فرص جديدة. سواء كانت لديك أسئلة أو فقط تريد أن تقول مرحبًا، سأبذل قصارى جهدي للرد في أقرب وقت ممكن.',
+            'contact.namePlaceholder': 'اسمك',
+            'contact.emailPlaceholder': 'بريدك الإلكتروني',
+            'contact.messagePlaceholder': 'رسالتك',
+            'contact.send': 'إرسال الرسالة',
+            'projects.title': 'مشاريعي',
+            'projects.subtitle': 'مجموعة من الأعمال التي أنشأتها، من منصات ويب متكاملة إلى تطبيقات موبايل تفاعلية ومشاريع ثلاثية الأبعاد.'
+        },
+        en: {
+            'nav.about': 'About',
+            'nav.skills': 'Skills',
+            'nav.projects': 'Projects',
+            'nav.contact': 'Contact',
+            'hero.eyebrow': 'Hello, my name is',
+            'hero.name': 'Ahmed Ali Al-Kamal.',
+            'hero.tagline': 'I build for the web.',
+            'hero.text': 'I am an IT graduate building full-stack web and mobile applications using Django, React, and Flutter, with a strong focus on clean code, user experience, and solving real-world problems.',
+            'hero.buttonWork': 'View My Work',
+            'hero.buttonGitHub': 'GitHub Profile',
+            'hero.buttonCv': 'Download CV',
+            'about.title': 'About Me',
+            'about.summaryTitle': 'Professional Summary',
+            'about.summaryText': 'IT graduate with hands-on experience building full-stack web applications and mobile apps. I work mainly with Django, React, and Flutter, and I enjoy writing clean code and building intuitive user experiences that solve real-world problems.',
+            'about.languagesTitle': 'Languages',
+            'about.arabic': 'Arabic',
+            'about.native': '- Native',
+            'about.english': 'English',
+            'about.proficient': '- Professional working proficiency',
+            'about.education': 'Education',
+            'about.degree': 'Bachelor of Information Technology',
+            'about.expected': 'Expected: 2026',
+            'about.university': 'University of Modern Sciences (UMS) - Sana\'a, Yemen',
+            'about.projectLabel': 'Graduation Project:',
+            'about.projectName': 'LoomApp - A full-stack web platform built with Django.',
+            'about.cvButton': 'Download Full CV',
+            'skills.title': 'Technical Skills',
+            'skills.languages': 'Languages',
+            'skills.frontend': 'Frontend',
+            'skills.backend': 'Backend',
+            'skills.database': 'Databases',
+            'skills.tools': 'Tools & More',
+            'skills.optimizedUI': 'Optimized interface',
+            'skills.cta': 'See What I\'ve Built With These Skills',
+            'contact.title': 'Get In Touch',
+            'contact.text': 'I am currently looking for new opportunities. Whether you have a question or just want to say hi, I will do my best to get back to you as soon as possible.',
+            'contact.namePlaceholder': 'Your Name',
+            'contact.emailPlaceholder': 'Your Email',
+            'contact.messagePlaceholder': 'Your Message',
+            'contact.send': 'Send Message',
+            'projects.title': 'My Projects',
+            'projects.subtitle': 'A collection of work I have built, from complete web platforms to interactive mobile apps and 3D projects.'
+        }
+    };
+
+    const langToggle = document.getElementById('lang-toggle');
+    const savedLang = localStorage.getItem('site-lang') || 'ar';
+
+    function applyBranding(lang) {
+        const brand = document.querySelector('.brand');
+        if (!brand) return;
+
+        const svg = document.createElement('img');
+        svg.src = './assets/images/logo-mark.svg';
+        svg.alt = 'Ahmed Ali Al-Kamal logo';
+        svg.className = 'brand-mark';
+        svg.width = 36;
+        svg.height = 36;
+
+        const existing = brand.querySelector('.brand-mark');
+        if (existing) existing.remove();
+
+        brand.insertBefore(svg, brand.firstChild);
+        brand.setAttribute('title', lang === 'ar' ? 'الصفحة الرئيسية' : 'Home');
+    }
+
+    function applyTranslations(lang) {
+        const dictionary = translations[lang] || translations.ar;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        applyBranding(lang);
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (dictionary[key]) {
+                el.textContent = dictionary[key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.dataset.i18nPlaceholder;
+            if (dictionary[key]) {
+                el.placeholder = dictionary[key];
+            }
+        });
+        if (langToggle) {
+            langToggle.textContent = lang === 'ar' ? 'EN' : 'AR';
+            langToggle.setAttribute('aria-label', lang === 'ar' ? 'Switch language to English' : 'تبديل اللغة إلى العربية');
+        }
+        localStorage.setItem('site-lang', lang);
+    }
+
+    applyTranslations(savedLang);
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const nextLang = document.documentElement.lang === 'ar' ? 'en' : 'ar';
+            applyTranslations(nextLang);
+        });
+    }
+
     // --- Render Shared Footer ---
     const footer = document.getElementById('site-footer');
     if (footer) {
         footer.innerHTML = `
-            <p>Built with HTML, CSS, and Vanilla JS</p>
-            <p>&copy; 2026 Ahmed Ali Al-Kamal. All rights reserved. | <span class="footer-location">Sana'a, Yemen</span></p>
+            <p>تم بناؤه باستخدام HTML و CSS و JavaScript</p>
+            <p>&copy; 2026 أحمد علي الكمال. جميع الحقوق محفوظة. | <span class="footer-location">صنعاء، اليمن</span></p>
         `;
     }
 
@@ -57,7 +202,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btn && menu) {
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            const isHidden = menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', String(!isHidden));
+        });
+
+        menu.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+            });
         });
     }
 

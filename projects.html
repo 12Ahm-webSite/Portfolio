@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore projects built by Ahmed Ali Al-Kamal, including full-stack web platforms, mobile apps, and interactive 3D scenes.">
+    <meta name="description" content="استكشف مشاريع أحمد علي الكمال، بما فيها منصات ويب، تطبيقات موبايل، ومشاريع تفاعلية ثلاثية الأبعاد.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedalkamal.dev/projects.html">
-    <meta property="og:title" content="Projects - Ahmed Ali Al-Kamal Portfolio">
-    <meta property="og:description" content="Explore projects built by Ahmed Ali Al-Kamal, including full-stack web platforms, mobile apps, and interactive 3D scenes.">
+    <meta property="og:title" content="المشاريع | محفظة أحمد علي الكمال">
+    <meta property="og:description" content="استكشف مشاريع أحمد علي الكمال، بما فيها منصات ويب، تطبيقات موبايل، ومشاريع تفاعلية ثلاثية الأبعاد.">
     <meta property="og:image" content="./assets/images/og-banner.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Projects - Ahmed Ali Al-Kamal Portfolio">
-    <meta name="twitter:description" content="Explore projects built by Ahmed Ali Al-Kamal.">
+    <meta name="twitter:title" content="المشاريع | محفظة أحمد علي الكمال">
+    <meta name="twitter:description" content="استكشف مشاريع أحمد علي الكمال.">
 
-    <title>Projects - Ahmed Ali Al-Kamal</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <title>المشاريع | أحمد علي الكمال</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo-mark.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <noscript>
         <div style="text-align:center;padding:2rem;background:#fef3c7;color:#92400e;font-family:sans-serif;">
-            <p><strong>JavaScript is disabled.</strong> Projects are loaded dynamically. Please enable JavaScript to view them.</p>
+            <p><strong>JavaScript غير مفعّل.</strong> المشاريع تُحمّل بشكل ديناميكي، يرجى تفعيل JavaScript لمشاهدتها.</p>
         </div>
     </noscript>
     <div class="page-shell">
@@ -39,17 +39,18 @@
                     <a href="index.html" class="brand text-gradient outfit-font">AA.</a>
 
                     <div class="nav-links">
-                        <a href="index.html#about" class="nav-link">About</a>
-                        <a href="index.html#skills" class="nav-link">Skills</a>
-                        <a href="projects.html" class="nav-link is-active">Projects</a>
-                        <a href="index.html#contact" class="nav-link">Contact</a>
+                        <a href="index.html#about" class="nav-link" data-i18n="nav.about">من أنا</a>
+                        <a href="index.html#skills" class="nav-link" data-i18n="nav.skills">المهارات</a>
+                        <a href="projects.html" class="nav-link is-active" data-i18n="nav.projects">المشاريع</a>
+                        <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">تواصل</a>
                     </div>
 
                     <div class="nav-actions">
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <button id="lang-toggle" class="theme-toggle" aria-label="Switch language">EN</button>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع">
                             <svg id="theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
                         </button>
-                        <button id="mobile-menu-button" class="menu-toggle" aria-label="Open menu">
+                        <button id="mobile-menu-button" class="menu-toggle" aria-label="فتح القائمة">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -60,19 +61,19 @@
 
             <div id="mobile-menu" class="mobile-menu glass hidden">
                 <div class="mobile-menu-inner">
-                    <a href="index.html#about" class="mobile-link">About</a>
-                    <a href="index.html#skills" class="mobile-link">Skills</a>
-                    <a href="projects.html" class="mobile-link is-active">Projects</a>
-                    <a href="index.html#contact" class="mobile-link">Contact</a>
+                    <a href="index.html#about" class="mobile-link" data-i18n="nav.about">من أنا</a>
+                    <a href="index.html#skills" class="mobile-link" data-i18n="nav.skills">المهارات</a>
+                    <a href="projects.html" class="mobile-link is-active" data-i18n="nav.projects">المشاريع</a>
+                    <a href="index.html#contact" class="mobile-link" data-i18n="nav.contact">تواصل</a>
                 </div>
             </div>
         </nav>
 
         <header class="page-header reveal">
             <div class="container-narrow">
-                <h1 class="outfit-font">My <span class="text-gradient">Projects</span></h1>
-                <p class="header-text">
-                    A collection of things I've built, ranging from full-stack web platforms to interactive mobile apps and 3D scenes.
+                <h1 class="outfit-font"><span class="text-gradient" data-i18n="projects.title">مشاريعي</span></h1>
+                <p class="header-text" data-i18n="projects.subtitle">
+                    مجموعة من الأعمال التي أنشأتها، من منصات ويب متكاملة إلى تطبيقات موبايل تفاعلية ومشاريع ثلاثية الأبعاد.
                 </p>
             </div>
         </header>

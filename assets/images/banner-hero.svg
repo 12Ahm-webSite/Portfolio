@@ -1,0 +1,96 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#122A3A"/>
+      <stop offset="0.52" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#8A4B35"/>
+    </linearGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D58B5D"/>
+      <stop offset="1" stop-color="#8A4B35"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D9F5EA"/>
+      <stop offset="0.5" stop-color="#F6C85F"/>
+      <stop offset="1" stop-color="#1E7890"/>
+    </linearGradient>
+    <pattern id="pattern" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M24 3L45 24L24 45L3 24L24 3Z" stroke="#F6C85F" stroke-opacity="0.22" stroke-width="2"/>
+      <path d="M24 12L36 24L24 36L12 24L24 12Z" stroke="#D9F5EA" stroke-opacity="0.14" stroke-width="2"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#071923" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" rx="40" fill="url(#sky)"/>
+  <rect width="1200" height="700" rx="40" fill="url(#pattern)" opacity="0.55"/>
+  <circle cx="1040" cy="110" r="150" fill="#F6C85F" fill-opacity="0.13"/>
+  <circle cx="1040" cy="110" r="108" stroke="#F6C85F" stroke-opacity="0.28" stroke-width="2"/>
+
+  <!-- Sanaani skyline and tower silhouette -->
+  <g opacity="0.7" fill="#061D29">
+    <path d="M0 570H120V470L155 438L190 470V570H230V392L268 358L306 392V570H342V445L378 414L414 445V570H475V350L520 305L565 350V570H612V430L652 395L692 430V570H748V366L794 321L840 366V570H900V410L938 377L976 410V570H1200V700H0V570Z"/>
+  </g>
+  <g fill="url(#clay)" filter="url(#shadow)">
+    <path d="M108 545V238L160 176L212 238V545H108Z"/>
+    <path d="M420 545V174L480 102L540 174V545H420Z"/>
+    <path d="M755 545V210L813 142L871 210V545H755Z"/>
+  </g>
+  <g fill="#F6C85F" opacity="0.82">
+    <path d="M160 176L108 238H212L160 176Z"/>
+    <path d="M480 102L420 174H540L480 102Z"/>
+    <path d="M813 142L755 210H871L813 142Z"/>
+  </g>
+  <g fill="url(#glass)" stroke="#F6C85F" stroke-width="3">
+    <path d="M135 300V268L160 242L185 268V300H135Z"/>
+    <path d="M135 374V342L160 316L185 342V374H135Z"/>
+    <path d="M449 255V215L480 183L511 215V255H449Z"/>
+    <path d="M449 355V315L480 283L511 315V355H449Z"/>
+    <path d="M784 294V258L813 228L842 258V294H784Z"/>
+    <path d="M784 380V344L813 314L842 344V380H784Z"/>
+  </g>
+  <path d="M0 575C205 532 350 568 530 548C722 526 945 550 1200 500V700H0V575Z" fill="#071923" fill-opacity="0.72"/>
+
+  <!-- Personal identity panel -->
+  <g filter="url(#shadow)">
+    <rect x="72" y="70" width="440" height="205" rx="30" fill="#071923" fill-opacity="0.76" stroke="#F6C85F" stroke-opacity="0.38"/>
+    <rect x="96" y="94" width="76" height="76" rx="22" fill="#D9F5EA"/>
+    <path d="M114 151L132 108H137L155 151H146L141 138H128L123 151H114ZM130 130H139L134 117L130 130Z" fill="#0F766E"/>
+    <text x="194" y="125" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="31" font-weight="800" fill="#FFFFFF">أحمد علي الكمال</text>
+    <text x="194" y="163" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="19" fill="#D9F5EA">مطور ويب وموبايل من صنعاء</text>
+    <path d="M96 202H288" stroke="#F6C85F" stroke-width="5" stroke-linecap="round"/>
+    <text x="96" y="238" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="17" fill="#F6C85F">أصنع حلولًا رقمية بروح يمنية</text>
+  </g>
+
+  <!-- Code card with Arabic details -->
+  <g filter="url(#shadow)">
+    <rect x="585" y="74" width="540" height="270" rx="30" fill="#071923" fill-opacity="0.86" stroke="#D9F5EA" stroke-opacity="0.24"/>
+    <circle cx="622" cy="110" r="7" fill="#E58B63"/>
+    <circle cx="647" cy="110" r="7" fill="#F6C85F"/>
+    <circle cx="672" cy="110" r="7" fill="#79D6B0"/>
+    <text x="625" y="165" font-family="monospace" font-size="24" fill="#79D6B0">const identity = {</text>
+    <text x="665" y="205" font-family="monospace" font-size="22" fill="#D9F5EA">name: "أحمد علي",</text>
+    <text x="665" y="241" font-family="monospace" font-size="22" fill="#F6C85F">home: "صنعاء",</text>
+    <text x="665" y="277" font-family="monospace" font-size="22" fill="#E58B63">stack: [Django, React, Flutter]</text>
+    <text x="625" y="317" font-family="monospace" font-size="24" fill="#79D6B0">};</text>
+  </g>
+
+  <!-- Traditional coffee dallah and project badge -->
+  <g transform="translate(570 405)" filter="url(#shadow)">
+    <path d="M80 105C80 65 109 43 150 43C191 43 220 65 220 105V140H80V105Z" fill="#C9794E"/>
+    <path d="M85 103H215" stroke="#F6C85F" stroke-width="7"/>
+    <path d="M220 85C274 55 294 89 266 119C252 134 235 137 216 130" stroke="#F6C85F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M80 92C32 65 4 95 33 125C45 137 61 139 82 130" stroke="#F6C85F" stroke-width="10" stroke-linecap="round"/>
+    <path d="M129 43L150 12L171 43" stroke="#F6C85F" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M80 140H220L205 169H95L80 140Z" fill="#8A4B35"/>
+    <circle cx="150" cy="98" r="18" fill="#F6C85F" fill-opacity="0.9"/>
+    <path d="M142 98L150 90L158 98L150 106L142 98Z" fill="#8A4B35"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="825" y="420" width="300" height="140" rx="26" fill="#F6C85F"/>
+    <text x="862" y="468" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="22" font-weight="700" fill="#071923">أبني الويب</text>
+    <text x="862" y="505" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F766E">بكود نظيف وتجربة إنسانية</text>
+    <path d="M862 529H1045" stroke="#8A4B35" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ahmed Ali Al-Kamal - Full-stack web and mobile developer specializing in Django, React, and Flutter. View my projects, skills, and get in touch.">
+    <meta name="description" content="أحمد علي الكمال - مطور ويب وموبايل متخصص في Django و React و Flutter، مع معرض مشاريع ومهارات وخدمات تطوير احترافية.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahmedalkamal.dev/">
-    <meta property="og:title" content="Ahmed Ali Al-Kamal - Full-stack Developer Portfolio">
-    <meta property="og:description" content="Full-stack web and mobile developer specializing in Django, React, and Flutter. View my projects, skills, and get in touch.">
+    <meta property="og:title" content="أحمد علي الكمال | محفظة مشاريع المطور">
+    <meta property="og:description" content="مطور ويب وموبايل متخصص في Django و React و Flutter، مع مشروعاتي ومهاراتي وتواصل معي.">
     <meta property="og:image" content="./assets/images/og-banner.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ahmed Ali Al-Kamal - Full-stack Developer Portfolio">
-    <meta name="twitter:description" content="Full-stack web and mobile developer specializing in Django, React, and Flutter.">
+    <meta name="twitter:title" content="أحمد علي الكمال | محفظة مشاريع المطور">
+    <meta name="twitter:description" content="مطور ويب وموبايل متخصص في Django و React و Flutter.">
 
-    <title>Ahmed Ali Al-Kamal - Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <title>أحمد علي الكمال | محفظة الأعمال</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo-mark.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <noscript>
         <div style="text-align:center;padding:2rem;background:#fef3c7;color:#92400e;font-family:sans-serif;">
-            <p><strong>JavaScript is disabled.</strong> Some features like theme toggling, mobile menu, and scroll animations won't work. The core content is still accessible.</p>
+            <p><strong>JavaScript غير مفعّل.</strong> بعض الميزات مثل تبديل الوضع، القائمة المتنقلة، والمؤثرات المتحركة لن تعمل، لكن المحتوى الأساسي سيتوفر بشكل كامل.</p>
         </div>
     </noscript>
     <div class="page-shell">
@@ -36,20 +36,21 @@
         <nav class="site-header glass">
             <div class="container-wide">
                 <div class="nav-bar">
-                    <a href="index.html" class="brand text-gradient outfit-font" aria-label="Home">AA.</a>
+                    <a href="index.html" class="brand text-gradient outfit-font" aria-label="الرئيسية">AA.</a>
 
                     <div class="nav-links">
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <a href="projects.html" class="nav-link">Projects</a>
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="#about" class="nav-link" data-i18n="nav.about">من أنا</a>
+                        <a href="#skills" class="nav-link" data-i18n="nav.skills">المهارات</a>
+                        <a href="projects.html" class="nav-link" data-i18n="nav.projects">المشاريع</a>
+                        <a href="#contact" class="nav-link" data-i18n="nav.contact">تواصل</a>
                     </div>
 
                     <div class="nav-actions">
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <button id="lang-toggle" class="theme-toggle" aria-label="Switch language">EN</button>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع">
                             <svg id="theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
                         </button>
-                        <button id="mobile-menu-button" class="menu-toggle" aria-label="Open menu">
+                        <button id="mobile-menu-button" class="menu-toggle" aria-label="فتح القائمة">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -60,29 +61,33 @@
 
             <div id="mobile-menu" class="mobile-menu glass hidden">
                 <div class="mobile-menu-inner">
-                    <a href="#about" class="mobile-link">About</a>
-                    <a href="#skills" class="mobile-link">Skills</a>
-                    <a href="projects.html" class="mobile-link">Projects</a>
-                    <a href="#contact" class="mobile-link">Contact</a>
+                    <a href="#about" class="mobile-link" data-i18n="nav.about">من أنا</a>
+                    <a href="#skills" class="mobile-link" data-i18n="nav.skills">المهارات</a>
+                    <a href="projects.html" class="mobile-link" data-i18n="nav.projects">المشاريع</a>
+                    <a href="#contact" class="mobile-link" data-i18n="nav.contact">تواصل</a>
                 </div>
             </div>
         </nav>
 
         <section id="hero" class="hero">
+            <div class="hero-visual reveal">
+                <img src="./assets/images/banner-hero.svg" alt="بنر شخصي لأحمد علي الكمال" loading="eager">
+            </div>
+
             <div class="container-narrow hero-content reveal">
-                <p class="eyebrow">Hello, my name is</p>
+                <p class="eyebrow" data-i18n="hero.eyebrow">مرحباً، اسمي</p>
                 <h1 class="hero-title outfit-font">
-                    Ahmed Ali Al-Kamal.<br>
-                    <span class="text-gradient">I build for the web.</span>
+                    <span data-i18n="hero.name">أحمد علي الكمال.</span><br>
+                    <span class="text-gradient" data-i18n="hero.tagline">أبني الويب بشكل احترافي.</span>
                 </h1>
-                <p class="hero-text">
-                    I'm an IT graduate specializing in full-stack web and mobile applications using Django, React, and Flutter. Passionate about clean code, UX, and solving complex problems.
+                <p class="hero-text" data-i18n="hero.text">
+                    أنا خريج تقنيات معلومات، وأعمل على بناء تطبيقات ويب وموبايل متكاملة باستخدام Django و React و Flutter، مع اهتمام كبير بالكود النظيف وتجربة المستخدم وحل المشكلات الواقعية.
                 </p>
                 <div class="hero-actions">
-                    <a href="projects.html" class="button">View My Work</a>
-                    <a href="https://github.com/12Ahm-webSite" target="_blank" rel="noopener noreferrer" class="button-secondary">GitHub Profile</a>
-                    <a href="docs/AhmedCV.pdf" target="_blank" rel="noopener noreferrer" class="button-secondary">
-                        Download CV
+                    <a href="projects.html" class="button" data-i18n="hero.buttonWork">عرض أعمالي</a>
+                    <a href="https://github.com/12Ahm-webSite" target="_blank" rel="noopener noreferrer" class="button-secondary" data-i18n="hero.buttonGitHub">ملفي على GitHub</a>
+                    <a href="docs/AhmedCV.pdf" target="_blank" rel="noopener noreferrer" class="button-secondary" data-i18n="hero.buttonCv">
+                        تحميل السيرة
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
@@ -91,24 +96,47 @@
             </div>
         </section>
 
+        <section class="section section-soft trust-strip reveal">
+            <div class="container-wide">
+                <div class="trust-items">
+                    <div class="trust-item">
+                        <strong>+3</strong>
+                        <span>سنوات تطوير</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>8</strong>
+                        <span>مشاريع منشورة</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>100%</strong>
+                        <span>تركيز على الجودة</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>24/7</strong>
+                        <span>التواصل والعمل</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="section section-soft">
             <div class="container-narrow reveal">
                 <div class="section-heading">
-                    <h2 class="outfit-font">About Me</h2>
+                    <h2 class="outfit-font" data-i18n="about.title">من أنا</h2>
                     <div class="section-line"></div>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-copy">
-                        <h3 class="section-subtitle">Professional Summary</h3>
-                        <p>
-                            IT graduate with hands-on experience building full-stack web applications and mobile apps. Proficient in Django, React, and Flutter. Passionate about clean code, user experience, and solving real-world problems through software.
+                        <h3 class="section-subtitle" data-i18n="about.summaryTitle">نبذة مختصرة</h3>
+                        <p data-i18n="about.summaryText">
+                            خريج تقنيات معلومات، ولدي خبرة عملية في تطوير تطبيقات ويب وموبايل كاملة المراحل. أعمل بشكل أساسي مع Django و React و Flutter، وأحب كتابة كود نظيف وتجربة مستخدم سلسة وحل المشكلات الواقعية من خلال البرمجيات.
                         </p>
 
-                        <h3 class="section-subtitle">Languages</h3>
+                        <h3 class="section-subtitle" data-i18n="about.languagesTitle">اللغات</h3>
                         <ul class="language-list">
-                            <li><span class="bullet-dot"></span> <strong>Arabic</strong> - Native</li>
-                            <li><span class="bullet-dot"></span> <strong>English</strong> - Professional Working Proficiency</li>
+                            <li><span class="bullet-dot"></span> <strong data-i18n="about.arabic">العربية</strong> <span data-i18n="about.native">- أصلية</span></li>
+                            <li><span class="bullet-dot"></span> <strong data-i18n="about.english">الإنجليزية</strong> <span data-i18n="about.proficient">- مستوى عملي جيد</span></li>
                         </ul>
                     </div>
 
@@ -121,19 +149,19 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20v-7.5l4-2.222"></path>
                                 </svg>
-                                Education
+                                <span data-i18n="about.education">التعليم</span>
                             </h3>
 
                             <div class="timeline">
-                                <h4>Bachelor of Information Technology</h4>
-                                <p class="timeline-meta">Expected: 2026</p>
-                                <p class="timeline-location">University of Modern Sciences (UMS) - Sana'a, Yemen</p>
+                                <h4 data-i18n="about.degree">بكالوريوس تقنية المعلومات</h4>
+                                <p class="timeline-meta" data-i18n="about.expected">متوقع: 2026</p>
+                                <p class="timeline-location" data-i18n="about.university">جامعة العلوم الحديثة (UMS) - صنعاء، اليمن</p>
                                 <div class="project-note">
-                                    <strong>Graduation Project:</strong> LoomApp - A full-stack web platform built with Django.
+                                    <strong data-i18n="about.projectLabel">مشروع التخرج:</strong> <span data-i18n="about.projectName">LoomApp - منصة ويب متكاملة تم بناؤها باستخدام Django.</span>
                                 </div>
                                 <div style="margin-top: 1.25rem;">
                                     <a href="docs/AhmedCV.pdf" target="_blank" rel="noopener noreferrer" class="button-inline" style="font-size: 0.88rem; padding: 0.65rem 1.2rem;">
-                                        Download Full CV
+                                        <span data-i18n="about.cvButton">تحميل السيرة كاملة</span>
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                         </svg>
@@ -149,13 +177,13 @@
         <section id="skills" class="section">
             <div class="container-narrow reveal">
                 <div class="section-heading">
-                    <h2 class="outfit-font">Technical Skills</h2>
+                    <h2 class="outfit-font" data-i18n="skills.title">المهارات التقنية</h2>
                     <div class="section-line"></div>
                 </div>
 
                 <div class="skills-grid">
                     <article class="skill-card">
-                        <h3>Languages</h3>
+                        <h3 data-i18n="skills.languages">اللغات</h3>
                         <div class="tag-list">
                             <span class="tag tag-blue">Python</span>
                             <span class="tag tag-yellow">JavaScript</span>
@@ -166,7 +194,7 @@
                     </article>
 
                     <article class="skill-card">
-                        <h3>Frontend</h3>
+                        <h3 data-i18n="skills.frontend">الواجهة الأمامية</h3>
                         <div class="tag-list">
                             <span class="tag tag-orange">HTML</span>
                             <span class="tag tag-blue">CSS</span>
@@ -176,7 +204,7 @@
                     </article>
 
                     <article class="skill-card">
-                        <h3>Backend</h3>
+                        <h3 data-i18n="skills.backend">الخلفية</h3>
                         <div class="tag-list">
                             <span class="tag tag-green">Django</span>
                             <span class="tag tag-emerald">Django REST</span>
@@ -186,7 +214,7 @@
                     </article>
 
                     <article class="skill-card">
-                        <h3>Databases</h3>
+                        <h3 data-i18n="skills.database">قواعد البيانات</h3>
                         <div class="tag-list">
                             <span class="tag tag-slate">SQLite</span>
                             <span class="tag tag-slate">MySQL</span>
@@ -195,7 +223,7 @@
                     </article>
 
                     <article class="skill-card wide">
-                        <h3>Tools &amp; Other</h3>
+                        <h3 data-i18n="skills.tools">الأدوات والمزيد</h3>
                         <div class="tag-list">
                             <span class="tag tag-neutral">Git</span>
                             <span class="tag tag-neutral">GitHub</span>
@@ -203,14 +231,14 @@
                             <span class="tag tag-neutral">Visual Studio 2022</span>
                             <span class="tag tag-primary">REST APIs</span>
                             <span class="tag tag-primary">Auth &amp; Permissions</span>
-                            <span class="tag tag-primary">ATS-optimized UI</span>
+                            <span class="tag tag-primary" data-i18n="skills.optimizedUI">واجهة مُحسّنة</span>
                         </div>
                     </article>
                 </div>
 
                 <div class="skills-cta">
                     <a href="projects.html" class="button-inline">
-                        See What I've Built With These Skills
+                        <span data-i18n="skills.cta">شاهد ما أنشأته بهذه المهارات</span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
@@ -220,9 +248,9 @@
         </section>
         <section id="contact" class="section contact">
             <div class="container-narrow contact-inner reveal">
-                <h2 class="outfit-font">Get In Touch</h2>
-                <p>
-                    I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                <h2 class="outfit-font" data-i18n="contact.title">تواصل معي</h2>
+                <p data-i18n="contact.text">
+                    أبحث حاليًا عن فرص جديدة. سواء كانت لديك أسئلة أو فقط تريد أن تقول مرحبًا، سأبذل قصارى جهدي للرد في أقرب وقت ممكن.
                 </p>
                 <div class="contact-cards">
                     <a href="mailto:Ahmaad.website@gmail.com" class="contact-card">
@@ -231,7 +259,7 @@
                         </svg>
                         <span>Ahmaad.website@gmail.com</span>
                     </a>
-                    <div class="contact-card" id="phone-card" role="button" tabindex="0" aria-label="Copy phone number" style="cursor: pointer;">
+                    <div class="contact-card" id="phone-card" role="button" tabindex="0" aria-label="نسخ رقم الهاتف" style="cursor: pointer;">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
@@ -241,12 +269,12 @@
 
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/mvzdpegb" method="POST">
                 <div class="form-row">
-                    <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-                    <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+                    <input type="text" name="name" placeholder="اسمك" data-i18n-placeholder="contact.namePlaceholder" required autocomplete="name">
+                    <input type="email" name="email" placeholder="بريدك الإلكتروني" data-i18n-placeholder="contact.emailPlaceholder" required autocomplete="email">
                 </div>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" rows="5" placeholder="رسالتك" data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
                 <button type="submit" class="button">
-                    Send Message
+                    <span data-i18n="contact.send">إرسال الرسالة</span>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                     </svg>
@@ -254,7 +282,7 @@
             </form>
 
                 <div class="social-links">
-                    <a href="https://github.com/12Ahm-webSite" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                    <a href="https://github.com/12Ahm-webSite" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="ملف GitHub">
                         <svg fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
                         </svg>
